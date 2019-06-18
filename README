@@ -1,0 +1,19 @@
+#########
+Create simple concept bean and ioc releationship
+
+#########
+
+declare BEAN in order to JAVA configuration
+
+JAVA configuration @configuration -> XML
+                   @Bean -> @service @controller @repository @component
+
+@Configuration JavaConfig  聲明這裡面有0個 bean 或是 很多個bean
+
+@Bean
+FunctionService1 在創建的時候會去呼叫 functionService
+返回是一個 bean 方法和class的名稱一樣
+
+@Bean UseFunctionService 中setfunction會去注入其他的bean
+
+所以只要在容器中有一個bean 就可以在其他地方創建
