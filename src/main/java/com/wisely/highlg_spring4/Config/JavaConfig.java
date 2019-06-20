@@ -1,5 +1,7 @@
-package com.wisely.highlg_spring4;
+package com.wisely.highlg_spring4.Config;
 
+import com.wisely.highlg_spring4.FunctionService1;
+import com.wisely.highlg_spring4.UseFunctonService1;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 

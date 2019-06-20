@@ -1,4 +1,4 @@
-package com.wisely.highlg_spring4;
+package com.wisely.highlg_spring4.Config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

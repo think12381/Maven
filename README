@@ -38,3 +38,29 @@ around 前後都執行
 
 
 4 開啟使用 AspectAutoProxy
+
+#########################################################
+
+Bean scope scope 是bean如何新建的實例
+
+scope 有以下幾種
+singleton 一個容器只有一個bean的實例 共用一個 bean的實例
+
+ex
+
+  DemoSingletonService demoSingletonService = context3.getBean(DemoSingletonService.class);
+  DemoSingletonService demoSingletonService1 = context3.getBean(DemoSingletonService.class);
+  demoSingletonService = demoSingletonService1  ========> 共用
+
+prototype 每次呼叫就產生一個bean實例
+
+  DemoPrototypeService demoPrototypeService = context3.getBean(DemoPrototypeService.class);
+  DemoPrototypeService demoPrototypeService1 = context3.getBean(DemoPrototypeService.class);
+  demoPrototypeService != demoPrototypeService1 =========> 每一次呼叫就產生新的
+
+request web中 http request 給一個 bean實例
+session web中 http session 給一個 bean實例
+globalsession
+
+
+

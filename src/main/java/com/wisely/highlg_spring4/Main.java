@@ -1,5 +1,9 @@
 package com.wisely.highlg_spring4;
 
+import com.wisely.highlg_spring4.Config.AopConfig;
+import com.wisely.highlg_spring4.Config.Diconfig;
+import com.wisely.highlg_spring4.Config.JavaConfig;
+import com.wisely.highlg_spring4.Config.ScopeConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -38,6 +42,20 @@ public class Main {
 
         context2.close();
 
+
+        AnnotationConfigApplicationContext context3 =
+                new AnnotationConfigApplicationContext(ScopeConfig.class);
+
+        DemoSingletonService demoSingletonService = context3.getBean(DemoSingletonService.class);
+        DemoSingletonService demoSingletonService1 = context3.getBean(DemoSingletonService.class);
+
+        DemoPrototypeService demoPrototypeService = context3.getBean(DemoPrototypeService.class);
+        DemoPrototypeService demoPrototypeService1 = context3.getBean(DemoPrototypeService.class);
+
+        System.out.println("Sigleton equal?" + demoSingletonService.equals(demoSingletonService1));
+
+        System.out.println("Prototye equal?" + demoPrototypeService.equals(demoPrototypeService1));
+        context3.close();
 
 
     }
