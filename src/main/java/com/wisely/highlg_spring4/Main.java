@@ -22,7 +22,23 @@ public class Main {
 
         System.out.println(useFunctionService1.sayHello("JAVA CONFIG"));
 
-        context.close();
+        context1.close();
+
+
+        AnnotationConfigApplicationContext context2 =
+                new AnnotationConfigApplicationContext(AopConfig.class);
+
+        DemoAnnotationService demoAnnotationService = context2.getBean(DemoAnnotationService.class);
+
+        DemoMethodService demoMethodService = context2.getBean(DemoMethodService.class);
+
+        demoAnnotationService.add();
+
+        demoMethodService.add();
+
+        context2.close();
+
+
 
     }
 }

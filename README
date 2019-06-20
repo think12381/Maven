@@ -17,3 +17,24 @@ FunctionService1 在創建的時候會去呼叫 functionService
 @Bean UseFunctionService 中setfunction會去注入其他的bean
 
 所以只要在容器中有一個bean 就可以在其他地方創建
+
+
+####################################################
+
+AOP的概念 如果說OOP是由封裝繼承多形 是一種由上到下的關係
+那麼AOP就是一種橫向的關係 連接各種class 在SPRING中也就是
+bean的連結
+
+AOP 主要是由
+1 通知 像是  before after around 當作切點
+
+before 方法使用之前先行呼叫 所以 就看到了 註解是攔截 add operation
+after 方法使用後呼叫因此看到了 方式是攔截
+around 前後都執行
+
+2 連接點 Joint point 只要Joint point被使用到就是一個方法之間的連接
+
+3 切點 @pointcut 聲明切點的位置
+
+
+4 開啟使用 AspectAutoProxy
