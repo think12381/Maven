@@ -1,4 +1,4 @@
-package com.wisely.highlg_spring4;
+package com.wisely.highlg_spring4.Config;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;

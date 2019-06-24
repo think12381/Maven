@@ -86,3 +86,10 @@ add path
             </resource>
   </resources>
 ##################################################################
+bean 生成和銷毀
+
+@postconstruct 在建構子完成後執行因此 JSR250Service 建構完成後 建造 JSR250 init
+
+@preDestroy 在Bean 銷毀前執行 因此 BeanWayService destory 銷毀 bean前
+先執行了 JSR destroy
+

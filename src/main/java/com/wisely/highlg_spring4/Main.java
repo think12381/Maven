@@ -1,9 +1,6 @@
 package com.wisely.highlg_spring4;
 
-import com.wisely.highlg_spring4.Config.AopConfig;
-import com.wisely.highlg_spring4.Config.Diconfig;
-import com.wisely.highlg_spring4.Config.JavaConfig;
-import com.wisely.highlg_spring4.Config.ScopeConfig;
+import com.wisely.highlg_spring4.Config.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class Main {
@@ -66,6 +63,15 @@ public class Main {
 
         context4.close();
 
+
+        AnnotationConfigApplicationContext context5 =
+                new AnnotationConfigApplicationContext(PrePostConfig.class);
+
+        BeanWayService beanWayService = context5.getBean(BeanWayService.class);
+
+        JSR250Service jsr250Service = context5.getBean(JSR250Service.class);
+
+        context5.close();
 
     }
 }
