@@ -57,6 +57,15 @@ public class Main {
         System.out.println("Prototye equal?" + demoPrototypeService.equals(demoPrototypeService1));
         context3.close();
 
+        AnnotationConfigApplicationContext context4 =
+                new AnnotationConfigApplicationContext(ElConfig.class);
+
+        ElConfig resourceService = context4.getBean(ElConfig.class);
+
+        resourceService.outputResource();
+
+        context4.close();
+
 
     }
 }

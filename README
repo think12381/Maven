@@ -62,5 +62,27 @@ request web中 http request 給一個 bean實例
 session web中 http session 給一個 bean實例
 globalsession
 
+#########################################################
 
+EL-spring
 
+調用資源  引入common-io
+
+如 字串 OS屬性 運算結果..... 網址
+
+1 add common-io
+2 @PropertySource("classpath:test.properties") 配合 PropertySourcesPlaceholderConfigurer
+3 pom.xml
+
+add path
+ <resources>
+            <resource>
+                <directory>src/main/resource</directory>
+                <includes>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+
+            </resource>
+  </resources>
+##################################################################
