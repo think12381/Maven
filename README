@@ -102,3 +102,13 @@ bean 生成和銷毀
 決定之後再將bean給註冊進去並且刷新
 context6.register(ProfileConfig.class);
 context6.refresh();
+
+##################################################################
+
+EVENT 是 bean 和 bean的溝通
+
+1 ApplicationEvent
+2 ApplicationListener 接收 onApplicationEvent處理
+
+3 ApplicationContext發布事件
+4 ApplicationContext publishEvent方法發布

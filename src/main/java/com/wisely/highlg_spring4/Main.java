@@ -88,5 +88,14 @@ public class Main {
 
         context6.close();
 
+        AnnotationConfigApplicationContext context7 =
+                new AnnotationConfigApplicationContext(EventConfig.class);
+
+        DemoPublisher demoPublisher = context7.getBean(DemoPublisher.class);
+
+        demoPublisher.publish("this is publisher event");
+
+        context7.close();
+
     }
 }
