@@ -73,5 +73,20 @@ public class Main {
 
         context5.close();
 
+        AnnotationConfigApplicationContext context6 =
+                new AnnotationConfigApplicationContext();
+
+        context6.getEnvironment().setActiveProfiles("dev");
+
+        context6.register(ProfileConfig.class);
+
+        context6.refresh();
+
+        DemoProfileService demoProfileService = context6.getBean(DemoProfileService.class);
+
+        System.out.println(demoProfileService.getContext());
+
+        context6.close();
+
     }
 }

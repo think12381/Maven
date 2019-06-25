@@ -93,3 +93,12 @@ bean 生成和銷毀
 @preDestroy 在Bean 銷毀前執行 因此 BeanWayService destory 銷毀 bean前
 先執行了 JSR destroy
 
+##################################################################
+
+@profile概念是為了在不同發展之下產生不同的配置狀況
+如 @Profile("dev") OR @Profile("prod")
+透過 getEnvironment().setActiveProfiles("dev"); OR setActiveProfiles("prod")
+來決定是否要發展版本或是產品版本
+決定之後再將bean給註冊進去並且刷新
+context6.register(ProfileConfig.class);
+context6.refresh();
